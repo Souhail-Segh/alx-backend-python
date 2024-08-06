@@ -1,15 +1,13 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 '''Task0 module.
 '''
 import asyncio
 import random
-import time
 
 
-def wait_random(max_delay):
+async def wait_random(max_delay: int = 10) -> float:
     '''Wait a random time and return it.
     '''
-    s = time.perf_counter()
-    await asyncio.sleep(max_delay)
-    run_time = time.perf_counter() - s
+    run_time = random.random() * max_delay
+    await asyncio.sleep(run_time)
     return run_time
