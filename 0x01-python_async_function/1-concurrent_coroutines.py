@@ -9,6 +9,8 @@ wait_random = __import__('0-basic_async_syntax').wait_random
 async def wait_n(n, max_delay: int = 10):
     '''Wait randomaly between 0 to max_delay for n time.
     '''
-    res = await asyncio.gather(*(wait_random(max_delay) for i in range(n)))
-    res_sorted = sorted(list(res))
+    res = await asyncio.gather(
+        *tuple(map(lambda _: wait_random(max_delay), range(n)))
+    )
+    res_sorted = sorted(res)
     return res_sorted
