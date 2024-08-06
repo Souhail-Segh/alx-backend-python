@@ -12,6 +12,6 @@ def measure_time(n: int, max_delay: int) -> float:
     '''Measure average time of asyncio.sleep.
     '''
     start_time = time.time()
-    asyncio.run( wait_n(n, max_delay))
+    asyncio.run(wait_n(n, max_delay))
     stop_time = time.time()
     return (stop_time - start_time) / n
