@@ -1,9 +1,6 @@
 #!/usr/bin/env python3
-'''Task 0's module.
-'''
-
+''' Add function with typing '''
 
 def add(a: float, b: float) -> float:
-    '''Adds two floating-point numbers.
-    '''
+    ''' Sum of a + b '''
     return a + b
